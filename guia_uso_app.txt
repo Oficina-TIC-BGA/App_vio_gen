@@ -1,0 +1,35 @@
+
+Aplicacion: 
+
+estructura de microservicios, 
+frontend SPA que se alimenta de apis proporcionadas por el Back-end
+cada end point del back-end estan relacionados en base a la tabla que representan en db
+con estos end points se puede hacer el CRUD basico, se comprueba estabilidad de la version 
+y funcionamiento adecuado del back
+
+front-end: React js libreria de javascript
+pasos para ponerlo a funcionar:
+abrir Git Bash en el directorio front-end
+iniciar la aplicacion con el comando:
+$ npm run start
+en http://localhost:3000/ se mostrara la aplicacion
+
+back-end: FastAPI framework de python 
+las librerias que se instalaron para la aplicacion estan en requirements.txt
+pasos para ponerlo a funcionar:
+abrir Git Bash en el directorio back-end
+iniciar el entorno virtual de python con el comando:
+$ source env/Scripts/activate
+una vez dentro del env activar el servidor uvicorn
+$ uvicorn main:app --reload
+ahora con esta ruta podran ver los end points y probarlos
+http://localhost:8000/docs#/
+
+base de datos: MySQL relacional funciona con phpMyAdmin
+revisar que el servicio msql57 este en ejecucion
+abrir phpMyAdmin
+http://localhost/phpMyAdmin/index.php
+en el directorio db esta reportes_vg.sql que contiene los datos base de policia y las tablas
+si no requieren los datos de policia solo es crear la db con el nombre reportes_vg
+y al ejecutar el back-end este poblara la tablas con las correspondientes relaciones entre ellas
+
